@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
 Why it's built this way: Flow Launcher 2.0+ passes everything as a single JSON string in the first system argument (sys.argv[1]). We parse it to figure out what action Flow Launcher wants us to take.
 
-2. The query Function (Finding Projects)
+## 2. The query Function (Finding Projects)
 
 When the user types kc blinker, Flow Launcher calls the query method.
 Python
@@ -74,11 +74,11 @@ os.walk: Recursively scans the SEARCH_DIR to find any .kicad_pro files.
 
 JsonRPCAction: Tells Flow Launcher what to do if the user presses Enter. Here, it triggers our open_file method with the full file path.
 
-ContextData: The secret sauce for the right-click menu. We pass the folder's root path (root) to the context_menu function so it knows where to look for PCBs and Schematics.
+ContextData: The secret sauce for the `right-click` menu. We pass the folder's root path (root) to the context_menu function so it knows where to look for PCBs and Schematics.
 
-3. The context_menu Function (Drill-down)
+## 3. The context_menu Function (Drill-down)
 
-Triggered when the user presses Shift + Enter. Flow Launcher passes the ContextData from the query result back to this function.
+Triggered when the user presses `Shift + Enter`. Flow Launcher passes the ContextData from the query result back to this function.
 
 ```python
 def context_menu(folder_path):
@@ -96,7 +96,7 @@ os.listdir: Unlike os.walk, this only looks at the immediate files inside the sp
 
 Filtering: It explicitly ignores -bak files and hidden files starting with . to keep the menu clutter-free.
 
-4. The open_file Function (Execution)
+## 4. The open_file Function (Execution)
 
 This is the final step. Whether the user pressed Enter on the main project or a specific schematic, it routes here.
 
