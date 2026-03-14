@@ -1,0 +1,12 @@
+{
+    "ID": "82b32c520e4b4a3d9d1e8f2c5d1a5678",
+    "ActionKeyword": "kc",
+    "Name": "KiCad Opener",
+    "Description": "Find KiCad Projects",
+    "Author": "Eran",
+    "Version": "1.0.4",
+    "Language": "python",
+    "Website": "https://google.com",
+    "ExecuteFileName": "main.py",
+    "IcoPath": "Images/app.png"
+  }
