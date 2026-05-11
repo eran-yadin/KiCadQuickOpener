@@ -1,8 +1,5 @@
 Folder Structure
 
-Ensure your plugin folder looks exactly like this:
-Plaintext
-
 KiCadQuickOpener/
 ├── Images/
 │   ├── project.png   # Main search icon
@@ -17,11 +14,11 @@ KiCadQuickOpener/
 (Note: If you are missing the Images folder or the specific icon files, Flow Launcher will display a default fallback icon).
 Usage
 
-    Trigger the plugin by typing `kc`  followed by your project name.
+Trigger the plugin by typing `kc`  followed by your project name.
 
-    Enter: Opens the main KiCad project file.
+Enter: Opens the main KiCad project file.
 
-    `Shift + Enter` (or Right Arrow): Opens the context menu to select specific PCB/Schematic files or open the directory.
+`Shift + Enter` (or Right Arrow): Opens the context menu to select specific PCB/Schematic files or open the directory.
 
 
 ---

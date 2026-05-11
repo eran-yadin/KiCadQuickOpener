@@ -18,7 +18,7 @@ def query(term):
                 results.append({
                     "Title": f.replace(".kicad_pro", ""),
                     "SubTitle": root,
-                    "IcoPath": "Images/project.png", # Icon for the main project
+                    "IcoPath": "icons/icon.png", # Icon for the main project
                     "JsonRPCAction": {
                         "method": "open_file",
                         "parameters": [os.path.join(root, f)]
@@ -35,7 +35,7 @@ def context_menu(folder_path):
     results.append({
         "Title": "Open Project Folder",
         "SubTitle": folder_path,
-        "IcoPath": "Images/folder.png", # Icon for the folder
+        "IcoPath": "icons/folder.png", # Icon for the folder
         "JsonRPCAction": {
             "method": "open_file",
             "parameters": [folder_path] # os.startfile opens directories natively
@@ -55,14 +55,14 @@ def context_menu(folder_path):
                 results.append({
                     "Title": f"PCB: {f}",
                     "SubTitle": "Open Layout",
-                    "IcoPath": "Images/pcb.png", # Icon for PCB
+                    "IcoPath": "icons/pcb.png", # Icon for PCB
                     "JsonRPCAction": {"method": "open_file", "parameters": [full_path]}
                 })
             elif f.endswith(".kicad_sch") or f.endswith(".sch"):
                 results.append({
                     "Title": f"Schematic: {f}",
                     "SubTitle": "Open Schematic",
-                    "IcoPath": "Images/sch.png", # Icon for Schematic
+                    "IcoPath": "icons/sch.png", # Icon for Schematic
                     "JsonRPCAction": {"method": "open_file", "parameters": [full_path]}
                 })
     except Exception as e:
